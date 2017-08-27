@@ -3,6 +3,7 @@ package com.example.roma.swipeoptions;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
@@ -67,9 +68,11 @@ public class SwipeOptionsAdapter extends RecyclerView.Adapter<SwipeOptionsAdapte
             Drawable drawable2 = ContextCompat.getDrawable(context, R.drawable.ic_assignment_ind_black_24dp);
 
             Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_assignment_ind_black_24dp);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
 
 //            imageView.setImageDrawable(drawable2);
-            imageView.setImageBitmap(bitmap);
+            imageView.setImageDrawable(bitmapDrawable);
+//            imageView.setImageBitmap(bitmap);
         }
     }
 }
